@@ -59,7 +59,7 @@ const register = (router) => {
     });
 
     return router;
-  };
+};
   
   module.exports = {
     register,
