@@ -50,6 +50,7 @@ clientMqtt.on("connect", async function () {
             console.log("humedad: " + jason.humedad);
             console.log("presion: " + jason.presion);
             console.log("nodoId: " + jason.nodoId);
+            console.log("no se : " + jason.router);
 
             pool.query('SELECT * FROM Dispositivos WHERE  dispositivoID=? ', [jason.dispositivoId], function(err, result, fields) {
                 if (err) {
