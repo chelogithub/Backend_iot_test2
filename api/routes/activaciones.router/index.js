@@ -10,9 +10,13 @@ const register = (router) => {
             clientMqtt.publish(topico,data,options, (error) => {
                 if (error) {
                     console.log(error);
+                    res.send("ERROR"); //Agregado para mandarle algo al front
+                }else
+                {
+                    res.send("DONE"); //Agregado para mandarle algo al front
                 }
             });
-            res.send("DONE"); //Agregado para mandarle algo al front
+            
     });
   
     router.get('/canal2/:id',  (req, res) =>  {
